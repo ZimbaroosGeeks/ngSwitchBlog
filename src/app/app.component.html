@@ -1,0 +1,20 @@
+<div [ngSwitch]="switchWord">
+  <div *ngSwitchCase="'D1'">Div with quotes 1</div>
+  <div *ngSwitchCase="'D2'">Div with quotes 2</div>
+  <div *ngSwitchCase="'D3'">Div with quotes 3</div>
+</div>
+
+<div [ngSwitch]="switchWord">
+  <div *ngSwitchCase="D1">Div 1 without quotes</div>
+  <div *ngSwitchCase="D2">Div 2 without quotes</div>
+  <div *ngSwitchCase="D3">Div 3 without quotes</div>
+</div>
+
+<form>
+  Set switchWord:
+  <input #textbox type="string" [(ngModel)]="newSwitch" name="newS" required />
+  <button (click)="saveValues()">Save</button>
+  <p>D1: {{ D1 }}</p>
+  <p>D2: {{ D2 }}</p>
+  <p>D3: {{ D3 }}</p>
+</form>
